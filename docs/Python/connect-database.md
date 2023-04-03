@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+---
+
+# Connect database
+
 ```python
 
 import pyodbc
