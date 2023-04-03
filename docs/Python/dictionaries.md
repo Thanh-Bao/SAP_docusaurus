@@ -2,7 +2,9 @@
 sidebar_position: 4
 ---
 
-# Create Dictionary
+# Dictionaries
+
+## Define
 
 ```python
 dic = {
