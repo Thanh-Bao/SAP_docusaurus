@@ -8,6 +8,8 @@ git clone https://github.com/SAP/openui5-sample-app demo
 
 - https://www.youtube.com/watch?v=YZDeq4HHF_s&ab_channel=CodeWithBrandon
 
+use **git bash**:
+
 ```
 mkdir demo ; /
 cd demo ; /
@@ -196,3 +198,7 @@ sap.ui.define(
 ```
 ui5 serve
 ```
+
+# Tutorial
+
+https://saplearners.com/getting-started-with-ui5-tooling/
