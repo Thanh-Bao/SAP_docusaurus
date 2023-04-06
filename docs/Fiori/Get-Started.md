@@ -199,6 +199,14 @@ sap.ui.define(
 ui5 serve
 ```
 
+```
+yarn add @openui5/ts-types-esm
+yarn add @sapui5/ts-types-esm
+```
+
+https://sap.github.io/ui5-typescript/
+
+
 # Tutorial
 
 https://saplearners.com/getting-started-with-ui5-tooling/
