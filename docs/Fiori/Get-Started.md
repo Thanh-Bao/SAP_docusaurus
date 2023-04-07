@@ -200,12 +200,72 @@ ui5 serve
 ```
 
 ```
-yarn add @openui5/ts-types-esm
-yarn add @sapui5/ts-types-esm
+yarn add -D @openui5/ts-types-esm
+yarn add -D @sapui5/ts-types-esm
 ```
 
 https://sap.github.io/ui5-typescript/
 
+To install hot reload
+https://www.npmjs.com/package/ui5-middleware-livereload
+https://github.com/Thanh-Bao/Fiori_hello_world/tree/5d99e4ec9c2faf3d84e94f382720f1040046daf2
+
+```json title=./package.json
+{
+  "name": "baobaostore.com",
+  "version": "0.3.0",
+  "description": "baobaostore.com build with OpenUI5",
+  "private": true,
+  "engines": {
+    "node": "^16.18.0 || >=18.12.0",
+    "npm": ">= 8"
+  },
+  "scripts": {
+    "start": "ui5 serve",
+    "lint": "eslint webapp",
+    "build": "ui5 build -a --clean-dest",
+    "build-self-contained": "ui5 build self-contained -a --clean-dest",
+    "serve-dist": "ws --compress -d dist"
+  },
+  "devDependencies": {
+    "@openui5/ts-types-esm": "^1.112.0",
+    "@sapui5/ts-types-esm": "^1.108.12",
+    "@ui5/cli": "^3.0.6",
+    "eslint": "^8.37.0",
+    "local-web-server": "^5.3.0",
+    "rimraf": "^4.4.1",
+    "ui5-middleware-livereload": "^0.8.2",
+    "ui5-middleware-simpleproxy": "^0.9.5"
+  },
+  "ui5": {
+    "dependencies": ["ui5-middleware-livereload"]
+  }
+}
+```
+
+```yaml title=./ui5.yaml
+specVersion: "2.0"
+metadata:
+  name: openui5-sample-app
+type: application
+framework:
+  name: OpenUI5
+  version: "1.112.0"
+  libraries:
+    - name: sap.f
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_fiori_3
+server:
+  customMiddleware:
+    - name: ui5-middleware-livereload
+      afterMiddleware: compression
+      configuration:
+        debug: true
+        ext: "xml,json,properties"
+        port: 35729
+        path: "webapp"
+```
 
 # Tutorial
 
