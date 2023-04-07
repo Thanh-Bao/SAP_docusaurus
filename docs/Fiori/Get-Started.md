@@ -206,7 +206,8 @@ yarn add -D @sapui5/ts-types-esm
 
 https://sap.github.io/ui5-typescript/
 
-To install hot reload
+#### To install hot reload
+
 https://www.npmjs.com/package/ui5-middleware-livereload
 https://github.com/Thanh-Bao/Fiori_hello_world/tree/5d99e4ec9c2faf3d84e94f382720f1040046daf2
 
