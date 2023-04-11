@@ -200,11 +200,15 @@ ui5 serve
 ```
 
 ```
+yarn add -D @sapui5/ts-types
+yarn add -D @openui5/ts-types
 yarn add -D @openui5/ts-types-esm
 yarn add -D @sapui5/ts-types-esm
+yarn add -D @sap/eslint-plugin-ui5-jsdocs
 ```
 
-https://sap.github.io/ui5-typescript/
+- https://sap.github.io/ui5-typescript/
+- https://blogs.sap.com/2021/10/15/getting-ready-for-ui5-development-with-visual-studio-code/
 
 #### To install hot reload
 
@@ -266,6 +270,12 @@ server:
         ext: "xml,json,properties"
         port: 35729
         path: "webapp"
+```
+
+## To install prettier
+
+```
+git clone
 ```
 
 # Tutorial
