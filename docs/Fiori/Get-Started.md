@@ -35,9 +35,11 @@ ui5 init
 vi manifest.json
 ```
 
-paste https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/3a/9babace121497abea8f0ea66e156d9/content.htm?no_cache=true
+- paste https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/3a/9babace121497abea8f0ea66e156d9/content.htm?no_cache=true
 
-or https://github.com/SAP/ui5-tooling/issues/530#issuecomment-872862794
+- or https://github.com/SAP/ui5-tooling/issues/530#issuecomment-872862794
+
+- or https://sapui5.hana.ondemand.com/#/topic/8f93bf2b2b13402e9f035128ce8b495f
 
 ```json title="/webapp/manifest.json"
 {
@@ -123,10 +125,10 @@ or https://github.com/SAP/ui5-tooling/issues/530#issuecomment-872862794
       }
     },
     "rootView": {
-            "viewName": "sap.ui.demo.walkthrough.view.App",
-            "type": "XML",
-            "id": "app"
-        },
+      "viewName": "sap.ui.demo.walkthrough.view.App",
+      "type": "XML",
+      "id": "app"
+    },
     "handleValidation": false,
     "config": {},
     "routing": {},
