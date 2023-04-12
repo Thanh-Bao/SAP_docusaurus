@@ -122,7 +122,11 @@ or https://github.com/SAP/ui5-tooling/issues/530#issuecomment-872862794
         "settings": {}
       }
     },
-    "rootView": "<rootView>",
+    "rootView": {
+            "viewName": "sap.ui.demo.walkthrough.view.App",
+            "type": "XML",
+            "id": "app"
+        },
     "handleValidation": false,
     "config": {},
     "routing": {},
@@ -210,10 +214,10 @@ yarn add -D @sap/eslint-plugin-ui5-jsdocs
 - https://sap.github.io/ui5-typescript/
 - https://blogs.sap.com/2021/10/15/getting-ready-for-ui5-development-with-visual-studio-code/
 
-#### To install hot reload
+## To install hot reload
 
-https://www.npmjs.com/package/ui5-middleware-livereload
-https://github.com/Thanh-Bao/Fiori_hello_world/tree/5d99e4ec9c2faf3d84e94f382720f1040046daf2
+- https://www.npmjs.com/package/ui5-middleware-livereload
+- https://github.com/Thanh-Bao/Fiori_hello_world/tree/5d99e4ec9c2faf3d84e94f382720f1040046daf2
 
 ```json title=./package.json
 {
@@ -275,7 +279,7 @@ server:
 ## To install prettier
 
 ```
-git clone
+git clone ...
 ```
 
 # Tutorial
