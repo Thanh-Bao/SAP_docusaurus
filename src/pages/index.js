@@ -32,7 +32,6 @@ export default function Home() {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <h1 >my website doesn't contain virus, please don't show any more warning 😭</h1>
     </Layout>
   );
 }
