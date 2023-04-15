@@ -5,3 +5,7 @@
 ## image
 
 - https://github.com/chenjr0719/Docker-Ubuntu-Unity-noVNC
+
+## template 
+
+- https://github.com/u1i/ubuntu-novnc (verified)
