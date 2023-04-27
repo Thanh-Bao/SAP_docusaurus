@@ -8,4 +8,4 @@
 
 Enable bridged VMware workstation
 
-![](/img/VMWave/412.png)
+![](/img/VMWare/412.png)
