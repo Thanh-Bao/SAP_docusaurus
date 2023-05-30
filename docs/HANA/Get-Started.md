@@ -28,3 +28,25 @@ At `Connection Options` box
 - `Validate Server Certificate` field: checked
 - `SSL Crypto Provider` field: empty
 - `SSL Trust Store` field: empty (not verify)
+
+---
+
+Review connection details
+
+```
+{
+  "connectionTimeout": 30,
+  "hanaOptions": {
+    "encrypt": true,
+    "sslValidateCertificate": true
+  },
+  "previewLimit": 50,
+  "driver": "SAPHana",
+  "name": "HANA_SAPCAP2",
+  "server": "9a515a48-184a-456f-bc52-c402b68554c9.hana.trial-us10.hanacloud.ondemand.com",
+  "port": 443,
+  "database": "DBADMIN",
+  "username": "DBADMIN",
+  "password": "Admin123@#"
+}
+```
