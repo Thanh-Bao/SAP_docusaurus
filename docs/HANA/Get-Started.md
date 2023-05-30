@@ -18,11 +18,13 @@ hdbsql -n 9a515a48-184a-456f-bc52-c402b68554c9.hana.trial-us10.hanacloud.ondeman
 
 # Query HANA with VSCode
 
-- Install extension HANHA
+Install extension HANHA
 
-- At `Connection Options` box
+---
 
--- `Encrypted connection` field: checked
--- `Validate Server Certificate` field: checked
--- `SSL Crypto Provider` field: empty
--- `SSL Trust Store` field: empty (not verify)
+At `Connection Options` box
+
+- `Encrypted connection` field: checked
+- `Validate Server Certificate` field: checked
+- `SSL Crypto Provider` field: empty
+- `SSL Trust Store` field: empty (not verify)
