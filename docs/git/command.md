@@ -144,8 +144,6 @@ git branch -m <tên branch cũ> <tên branch mới>
 
 [Original article](https://nvie.com/posts/a-successful-git-branching-model/)
 
-![git models](git-asset/git-models.png)
-
 ## Extensions
 
 - Git graph
