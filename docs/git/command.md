@@ -11,7 +11,7 @@
     - [Cách 1:](#cách-1)
     - [Cách 2:](#cách-2)
   - [`git merge`](#git-merge)
-  - [`git diff` - Hiển thị các thay đổi giữa các lần commits, commit and working tree](#git-diff---hiển-thị-các-thay-đổi-giữa-các-lần-commits-commit-and-working-tree)
+  - [`git diff` - Hiển thị các thay đổi giữa các lần commits, commit and working tree.](#git-diff---hiển-thị-các-thay-đổi-giữa-các-lần-commits-commit-and-working-tree)
   - [`git remote`](#git-remote)
     - [`git remote add [<options>] <name> <url>`](#git-remote-add-options-name-url)
   - [`git remote show [<options>] <name>`](#git-remote-show-options-name)
