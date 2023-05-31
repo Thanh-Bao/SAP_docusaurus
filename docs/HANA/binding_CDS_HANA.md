@@ -26,14 +26,21 @@ bao1
 cds add hana
 ```
 
+<details>
+  <summary>view log</summary>
+  
 Adding feature(s) to project in current folder
-
 Adding feature 'hana'...
 Done adding features
+ 
+</details>
 
 ```
 cds build
 ```
+
+<details>
+  <summary>view log</summary>
 
 [cds] - the following build tasks will be executed
 [cds] - {
@@ -84,9 +91,14 @@ gen\srv\srv\csn.json
 
 [cds] - build completed in 465 ms
 
+</details>
+
 ```
 cds deploy --to hana:baoinstance1
 ```
+
+<details>
+  <summary>view log</summary>
 
 Starting deploy to SAP HANA ...
 Using cds bind
@@ -572,3 +584,5 @@ TIP: Run with cloud bindings: cds watch --profile hybrid
 If not already done, use cds add hana to configure the project for SAP HANA.
 
 Done.
+
+</details>

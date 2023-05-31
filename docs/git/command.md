@@ -1,5 +1,3 @@
-# Learn Git
-
 - [Learn Git](#learn-git)
   - [`git status`](#git-status)
   - [`git add`](#git-add)
@@ -136,9 +134,9 @@ git branch -m <tên branch cũ> <tên branch mới>
 
 ### `git fetch`
 
-### To delete branch `git branch -D <local branch name>`
+#### To delete branch `git branch -D <local branch name>`
 
-### To delete remote branch `git push <host name, eg: origin> --delete <remote-branch-name>`
+#### To delete remote branch `git push <host name, eg: origin> --delete <remote-branch-name>`
 
 ## Git-flow
 
