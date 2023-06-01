@@ -115,6 +115,8 @@ git branch -m <tên branch cũ> <tên branch mới>
 
 ### `git merge`
 
+Thông thường merge xong delete luôn branch
+
 ### `git diff` - Hiển thị các thay đổi giữa các lần commits, commit and working tree
 
 - Cách 2 là gõ git status
