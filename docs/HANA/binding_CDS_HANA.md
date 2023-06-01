@@ -1,24 +1,17 @@
 ### Create HANA cloud
 
+https://developers.sap.com/tutorials/hana-cloud-deploying.html
+
 | Instance   | Service        | Plan | Credentials | Stauts  |     |
 | ---------- | -------------- | ---- | ----------- | ------- | --- |
 | DB_DEMO123 | SAP HANA Cloud | hana |             | Created |     |
 
-### Create HDI Container (hdi-shared)
+### Create HDI Container (hdi-shared) (Service Marketplace)
 
-| Instance     | Service                           | Plan       | Credentials | Stauts  |     |
-| ------------ | --------------------------------- | ---------- | ----------- | ------- | --- |
-| DB_DEMO123   | SAP HANA Cloud                    | hana       |             | Created |     |
-| baoinstance1 | SAP HANA Schemas & HDI Containers | hdi-shared |             | Created |     |
-
-### Create service key for HDI
-
-bao1
-
-| Instance     | Service                           | Plan       | Credentials | Stauts  |     |
-| ------------ | --------------------------------- | ---------- | ----------- | ------- | --- |
-| DB_DEMO123   | SAP HANA Cloud                    | hana       |             | Created |     |
-| baoinstance1 | SAP HANA Schemas & HDI Containers | hdi-shared | 1 key       | Created |     |
+| Instance        | Service                           | Plan       | Credentials | Stauts  |     |
+| --------------- | --------------------------------- | ---------- | ----------- | ------- | --- |
+| DB_DEMO123      | SAP HANA Cloud                    | hana       |             | Created |     |
+| baoHDIinstance1 | SAP HANA Schemas & HDI Containers | hdi-shared |             | Created |     |
 
 ### In SAP CAP VSCode
 
@@ -36,65 +29,7 @@ Done adding features
 </details>
 
 ```
-cds build
-```
-
-<details>
-  <summary>view log</summary>
-
-[cds] - the following build tasks will be executed
-[cds] - {
-"build": {
-"target": "gen",
-"tasks": [
-{"for":"hana", "src":"db", "options":{"model":["db","srv","app"]}},
-{"for":"nodejs", "src":"srv", "options":{"model":["db","srv","app"]}}
-]
-}
-}
-
-[cds] - building project [C:\github_reponsitory\learn_SAP_CAP\3.CAP_with_HANA_Cloud_.30_05_2023], clean [true]
-[cds] - cds [6.8.1], compiler [3.9.2], home [C:\github_reponsitory\learn_SAP_CAP\3.CAP_with_HANA_Cloud_.30_05_2023\node_modules\@sap\cds]
-
-[cds] - done > wrote output to:
-gen\db\package.json
-gen\db\src\.hdiconfig
-gen\db\src\gen\.hdiconfig
-gen\db\src\gen\.hdinamespace
-gen\db\src\gen\CatalogService.Authors.hdbview
-gen\db\src\gen\CatalogService.Books.hdbview
-gen\db\src\gen\CatalogService.Books_texts.hdbview
-gen\db\src\gen\CatalogService.Countries.hdbview
-gen\db\src\gen\CatalogService.Countries_texts.hdbview
-gen\db\src\gen\CatalogService.Orders.hdbview
-gen\db\src\gen\localized.CatalogService.Authors.hdbview
-gen\db\src\gen\localized.CatalogService.Books.hdbview
-gen\db\src\gen\localized.CatalogService.Countries.hdbview
-gen\db\src\gen\localized.CatalogService.Orders.hdbview
-gen\db\src\gen\localized.my.bookshop.Authors.hdbview
-gen\db\src\gen\localized.my.bookshop.Books.hdbview
-gen\db\src\gen\localized.my.bookshop.Orders.hdbview
-gen\db\src\gen\localized.sap.common.Countries.hdbview
-gen\db\src\gen\my.bookshop.Authors.hdbtable
-gen\db\src\gen\my.bookshop.Books.hdbtable
-gen\db\src\gen\my.bookshop.Books_texts.hdbtable
-gen\db\src\gen\my.bookshop.Orders.hdbtable
-gen\db\src\gen\sap.common.Countries.hdbtable
-gen\db\src\gen\sap.common.Countries_texts.hdbtable
-gen\db\undeploy.json
-gen\srv\.cdsrc.json
-gen\srv\package-lock.json
-gen\srv\package.json
-gen\srv\srv_i18n\i18n.json
-gen\srv\srv\cat-service.js
-gen\srv\srv\csn.json
-
-[cds] - build completed in 465 ms
-
-</details>
-
-```
-cds deploy --to hana:baoinstance1
+cds deploy --to hana:baoHDIinstance1
 ```
 
 <details>
@@ -146,9 +81,9 @@ gen\db\undeploy.json
 
 [cds] - build completed in 430 ms
 
-Using container baoinstance1
-Getting service baoinstance1
-Creating service key baoinstance1-key - please be patient...
+Using container baoHDIinstance1
+Getting service baoHDIinstance1
+Creating service key baoHDIinstance1-key - please be patient...
 Installing @sap/hdi-deploy
 npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
 npm WARN idealTree Removing dependencies.@sap/hdi-deploy in favor of devDependencies.@sap/hdi-deploy
@@ -161,7 +96,7 @@ Deploying to HANA from C:\github*reponsitory\learn_SAP_CAP\3.CAP_with_HANA_Cloud
 [deploy] - VCAP_SERVICES: {
 "hana": [
 {
-"name": "baoinstance1",
+"name": "baoHDIinstance1",
 "tags": [
 "hana"
 ],
@@ -185,7 +120,7 @@ Using @sap/hana-client@2.16.26 for connection
 23 files collected
 
 [deploy] - 0 reusable modules collected
-Target service: baoinstance1
+Target service: baoHDIinstance1
 
 [deploy] - Session variable APPLICATION is set to "SAP_HDI//".
 
@@ -576,7 +511,7 @@ Unlocking the container "B96C1E357CE74672AEE8487D2F664AAB"...
 Unlocking the container "B96C1E357CE74672AEE8487D2F664AAB"... ok (0s 1ms)
 
 Retrieving data from Cloud Foundry...
-Binding db to Cloud Foundry managed service baoinstance1:baoinstance1-key with kind hana
+Binding db to Cloud Foundry managed service baoHDIinstance1:baoHDIinstance1-key with kind hana
 3.CAP*with_HANA_Cloud*.30_05_2023/.gitignore:7:.cdsrc-private.json .cdsrc-private.json
 
 Saving bindings to .cdsrc-private.json in profile hybrid
@@ -586,6 +521,10 @@ If not already done, use cds add hana to configure the project for SAP HANA.
 Done.
 
 </details>
+
+```
+yarn add hdb
+```
 
 ```
 cds watch --profile hybrid
