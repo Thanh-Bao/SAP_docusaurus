@@ -586,3 +586,7 @@ If not already done, use cds add hana to configure the project for SAP HANA.
 Done.
 
 </details>
+
+```
+cds watch --profile hybrid
+```
