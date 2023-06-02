@@ -530,13 +530,16 @@ yarn add hdb
 cds watch --profile hybrid
 ```
 
-------Done-----
+---🎉🎉🎉🎉---Done--🎉🎉🎉🎉---
 
 #### To use cds watch
 
 Copy
 
 ```
+
+....
+
 "db": {
         "binding": {
           "type": "cf",
@@ -552,6 +555,8 @@ Copy
           "name": "db"
         }
       }
+
+      ...
 
 ```
 
