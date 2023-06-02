@@ -522,9 +522,6 @@ Done.
 
 </details>
 
-```
-yarn add hdb
-```
 
 ```
 cds watch --profile hybrid
