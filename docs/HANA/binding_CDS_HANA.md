@@ -529,3 +529,75 @@ yarn add hdb
 ```
 cds watch --profile hybrid
 ```
+
+------Done-----
+
+#### To use cds watch
+
+Copy
+
+```
+"db": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "591a0860trial",
+          "space": "dev",
+          "instance": "BaoHDIinstance123",
+          "key": "BaoHDIinstance123-key",
+          "resolved": false
+        },
+        "kind": "hana",
+        "vcap": {
+          "name": "db"
+        }
+      }
+
+```
+
+from `.cdsrc-private.json` and paste to `package.json` (package.json.cds.requires.db)
+
+```
+{
+  "name": "bookshop",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^6",
+    "express": "^4",
+    "hdb": "^0.19.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "591a0860trial",
+          "space": "dev",
+          "instance": "BaoHDIinstance123",
+          "key": "BaoHDIinstance123-key",
+          "resolved": false
+        },
+        "kind": "hana",
+        "vcap": {
+          "name": "db"
+        }
+      }
+    }
+  }
+}
+```
+
+run
+
+```
+cds watch
+```
