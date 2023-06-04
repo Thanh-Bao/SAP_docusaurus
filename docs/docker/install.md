@@ -1,1 +1,3 @@
-apt install docker.io
+```
+ snap install docker
+```
