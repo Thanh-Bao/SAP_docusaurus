@@ -57,3 +57,24 @@ annotate ProductService.Products with {
 ```
 
 Trong ví dụ này, `name` và `price` sẽ được hiển thị mà không cần tùy chỉnh label hoặc các thuộc tính khác.
+
+________________________________________________
+
+`@<AnnotationType>` trong cú pháp annotation của SAP CAP là một phần tử chỉ ra loại annotation mà bạn muốn áp dụng. 
+
+Các loại annotation này có thể bao gồm các chức năng như tạo ra giao diện người dùng tự động (`@UI`), định nghĩa nhãn và tiêu đề (`@Common.Label`, `@title`), đặt ràng buộc và quy tắc cho dữ liệu (`@assert.range`, `@assert.notNull`), v.v. 
+
+Mỗi loại annotation sẽ có một hoặc nhiều giá trị tương ứng (<AnnotationValue>) cung cấp chi tiết về cách annotation được áp dụng.
+
+Ví dụ: 
+
+```CDS
+annotate ProductService.Products with {
+    @UI.LineItem: [
+        { Value: 'name' },
+        { Value: 'price' }
+    ]
+};
+```
+
+Ở đây, `@UI.LineItem` là loại annotation, chỉ ra rằng chúng ta đang định nghĩa cách các mục sẽ hiển thị trong một danh sách. Mỗi giá trị trong mảng (ở đây là 'name' và 'price') sẽ tương ứng với một mục trên danh sách.
