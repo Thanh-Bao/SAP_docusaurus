@@ -58,7 +58,7 @@ annotate ProductService.Products with {
 
 Trong ví dụ này, `name` và `price` sẽ được hiển thị mà không cần tùy chỉnh label hoặc các thuộc tính khác.
 
-________________________________________________
+------------------------------------------
 
 `@<AnnotationType>` trong cú pháp annotation của SAP CAP là một phần tử chỉ ra loại annotation mà bạn muốn áp dụng. 
 
